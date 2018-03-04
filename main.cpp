@@ -1,6 +1,5 @@
 #include <iostream>
 #include <map>
-#include <string>
 using namespace std;
 
 /*class StartMenu
@@ -26,11 +25,17 @@ public:
 		name = name1;
 		// был добавлен ингридиент name
 	}
-	bool operator<(const Ingridient& ingr)
+	/*bool operator<(const Ingridient ingr)
 	{
 		return name > ingr.name;
-	}
+	}*/
+	friend bool operator<(const Ingridient ingr, const Ingridient ingr1);
 };
+
+bool operator<(const Ingridient ingr, const Ingridient ingr1)
+{
+	return ingr.name > ingr1.name;
+}
 
 
 class CPizza
@@ -277,3 +282,9 @@ public:
 		}
 	}
 };
+
+int main()
+{
+	User* person = new User;
+	return 0;
+}
