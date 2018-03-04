@@ -25,10 +25,6 @@ public:
 		name = name1;
 		// был добавлен ингридиент name
 	}
-	/*bool operator<(const Ingridient ingr)
-	{
-		return name > ingr.name;
-	}*/
 	friend bool operator<(const Ingridient ingr, const Ingridient ingr1);
 };
 
